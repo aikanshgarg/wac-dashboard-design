@@ -18,6 +18,12 @@ $num-font-size: 24px;
 .num-font-size-v2 {
   font-size: $num-font-size;
 }
+.orange-text {
+  color: $secondary-color;
+}
+.blue-text {
+  color: $primary-color;
+}
 
 .subtext {
   font-size: $subtext-font-size;
@@ -51,9 +57,11 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   animation: fadeInAnimation ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  background-color: #eeeff3;
 }
 
 @keyframes fadeInAnimation {
@@ -78,8 +86,6 @@ body {
   padding: 20px 60px;
 
   &__logo {
-    // margin-right: 60px;
-
     img {
       height: 30px;
     }
@@ -106,7 +112,6 @@ body {
   &__user {
     display: flex;
     gap: 40px;
-    // padding-left: 400px;
 
     .user-links {
       display: flex;
@@ -137,7 +142,6 @@ body {
 
 .main {
   padding: 60px;
-  background-color: lightgray;
 }
 
 .ccard-title-text {
@@ -153,6 +157,7 @@ body {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  // flex-wrap: wrap;
 
   &.ccards-row {
     overflow-x: scroll;
@@ -191,6 +196,7 @@ body {
         color: $white-color;
         font-size: 20px;
         font-weight: 600;
+        text-align: balance;
       }
       a {
         color: $secondary-color;
@@ -329,6 +335,7 @@ body {
         font-weight: 500;
       }
     }
+
     .row2,
     .row3 {
       display: flex;
@@ -338,6 +345,15 @@ body {
     .row2 {
       border-bottom: $grey-underline;
       padding: 30px 0;
+
+      .box {
+        p {
+          &:nth-child(2) {
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+      }
     }
     .row3 {
       padding: 30px 0;
@@ -347,6 +363,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .hole {
@@ -447,25 +464,36 @@ body {
     }
     .row2 {
       display: flex;
-      gap: 30px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      gap: 60px;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: $grey-underline;
 
-      &:not(:last-child) {
-        border-bottom: $grey-underline;
-        padding: 20px 0;
+      .col {
+        font-weight: 400;
+        font-size: 14px;
       }
     }
     .row3 {
       display: flex;
       justify-content: center;
+      padding-top: 20px;
 
       .seemore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $primary-color;
-        padding: 2px 6px;
+        padding: 2px 16px;
         color: $white-color;
-        border-radius: 15px;
+        border-radius: 8px;
 
         img {
-          height: 20px;
+          height: 40px;
         }
       }
     }
