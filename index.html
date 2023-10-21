@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet Dashboard | Aikansh Garg for AppMySite</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="/assets/Logo.png" alt="logo" />
+      </div>
+
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link db">Dashboard</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Wallet</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Transactions</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__user">
+        <div class="user-links">
+          <a href="#" class="user__link">
+            <img src="/assets/Settings.png" alt="Settings"
+          /></a>
+          <a href="#" class="user__link"
+            ><img src="/assets/Message.png" alt="Message.png"
+          /></a>
+          <a href="#" class="user__link">
+            <img src="/assets/Group.png" alt="Group" />
+            <div class="notif"></div>
+          </a>
+        </div>
+
+        <a href="#" class="user__link">James Smith</a>
+        <a href="#" class="user__link"
+          ><img src="/assets/logout.png" alt="logout"
+        /></a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="row">
+        <div class="card card--left">
+          <span class="card__cta">Announcement</span>
+          <p class="card__text">
+            The world's second largest economy is still struggling to recover
+            from the pandemic
+          </p>
+          <a href="#">Read More <img src="/assets/next.png" alt="next" /></a>
+          <div class="dots">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="card card--right">
+          <div class="card__row1">
+            <p>Main Account</p>
+            <p>Available Funds</p>
+          </div>
+
+          <div class="card__row2">
+            <div class="card__row2--col1">
+              <p>First Savings Account</p>
+              <p>*** **** **** 1234</p>
+            </div>
+            <div class="card__row2--col2">
+              <p>68.789,56 <span>$</span></p>
+            </div>
+          </div>
+
+          <div class="card__row3">
+            <div class="card__row3--col">
+              <img src="assets/download.png" alt="down" />
+              <div>
+                <p>3.256,29 $</p>
+                <p>income</p>
+              </div>
+            </div>
+
+            <div class="card__row3--col">
+              <img src="assets/upload.png" alt="down" />
+              <div>
+                <p>1.538,20 $</p>
+                <p>Expense</p>
+              </div>
+            </div>
+
+            <div class="card__row3--cta">Transfer Money</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row ccards-row">
+        <div class="card card--debit" id="active-card">
+          <div class="row1">
+            <img src="assets/green-tick.png" alt="tick" />
+            <h3 class="ccard-title-text ccard-title-text-active">CARD</h3>
+          </div>
+          <h3 class="row2">**** **** **** 1234</h3>
+          <div class="row3">
+            <div class="box1">
+              <p>AVAILABLE FUNDS</p>
+              <p>68.789,56 $</p>
+            </div>
+            <div class="box2">
+              <p>EXPIRES</p>
+              <p>12/34</p>
+            </div>
+            <div class="box3">
+              <p>CVV</p>
+              <p>123</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--debit">
+          <div class="row1">
+            <img src="assets/green-tick.png" alt="tick" />
+            <h3 class="ccard-title-text">CARD</h3>
+          </div>
+          <h3 class="row2">**** **** **** 1234</h3>
+          <div class="row3">
+            <div class="box1">
+              <p>AVAILABLE FUNDS</p>
+              <p>68.789,56 $</p>
+            </div>
+            <div class="box2">
+              <p>EXPIRES</p>
+              <p>12/34</p>
+            </div>
+            <div class="box3">
+              <p>CVV</p>
+              <p>123</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--debit">
+          <div class="row1">
+            <img src="assets/green-tick.png" alt="tick" />
+            <h3 class="ccard-title-text">CARD</h3>
+          </div>
+          <h3 class="row2">**** **** **** 1234</h3>
+          <div class="row3">
+            <div class="box1">
+              <p>AVAILABLE FUNDS</p>
+              <p>68.789,56 $</p>
+            </div>
+            <div class="box2">
+              <p>EXPIRES</p>
+              <p>12/34</p>
+            </div>
+            <div class="box3">
+              <p>CVV</p>
+              <p>123</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--debit">
+          <div class="row1">
+            <img src="assets/green-tick.png" alt="tick" />
+            <h3 class="ccard-title-text">CARD</h3>
+          </div>
+          <h3 class="row2">**** **** **** 1234</h3>
+          <div class="row3">
+            <div class="box1">
+              <p>AVAILABLE FUNDS</p>
+              <p>68.789,56 $</p>
+            </div>
+            <div class="box2">
+              <p>EXPIRES</p>
+              <p>12/34</p>
+            </div>
+            <div class="box3">
+              <p>CVV</p>
+              <p>123</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="card stats">
+          <div class="row1">
+            <h4>Cashflow</h4>
+            <img src="assets/bluebox-next.png" class="bluearr" alt="next" />
+          </div>
+          <div class="row2">
+            <div class="box">
+              <p>Daily</p>
+              <p>285,39 <span>$</span></p>
+            </div>
+            <div class="box">
+              <p>Daily</p>
+              <p>1.487,79 <span>$</span></p>
+            </div>
+            <div class="box">
+              <p>Daily</p>
+              <p>7.400,00 <span>$</span></p>
+            </div>
+          </div>
+          <div class="row3">
+            <p>
+              Last Month <img src="assets/darr.png" class="darr" alt="darr" />
+            </p>
+          </div>
+          <div class="row4">
+            <div class="donut">
+              <div class="hole">
+                <div class="text">
+                  <p>Total Cashflow</p>
+                  <h3>7.400 $</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="datas">
+              <div class="data1">
+                <img src="assets/down.png" alt="down" />
+                <div>
+                  <p>4.441,20 $</p>
+                  <p>Income</p>
+                </div>
+              </div>
+              <div class="data2">
+                <img src="assets/up.png" alt="up" />
+                <div>
+                  <p>2.959,20 $</p>
+                  <p>Expense</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card table">
+          <div class="row1">
+            <h4>Latest transactions</h4>
+            <img src="assets/bluebox-next.png" class="bluearr" alt="next" />
+          </div>
+
+          <div class="row2">
+            <div class="col"><b>Today</b></div>
+            <div class="col">Fashion</div>
+            <div class="col">Card payment</div>
+            <div class="col marker-col">
+              <div class="orange-circle"></div>
+              Clothes
+            </div>
+            <div class="col">
+              -15,00 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col"><b>20/05</b></div>
+            <div class="col">Food</div>
+            <div class="col">Card payment</div>
+            <div class="col marker-col">
+              <div class="orange-circle"></div>
+              Food
+            </div>
+            <div class="col">
+              -8,00 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col"><b>18/05</b></div>
+            <div class="col">Invest Money</div>
+            <div class="col">Transfer</div>
+            <div class="col marker-col">
+              <div class="blue-circle"></div>
+              Business
+            </div>
+            <div class="col">
+              -249,69 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col"><b>16/05</b></div>
+            <div class="col">My Company</div>
+            <div class="col">Transfer</div>
+            <div class="col marker-col">
+              <div class="blue-circle"></div>
+              Salary
+            </div>
+            <div class="col">
+              +1300,00 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col"><b>09/05</b></div>
+            <div class="col">Medical Checkup</div>
+            <div class="col">Card payment</div>
+            <div class="col marker-col">
+              <div class="orange-circle"></div>
+              Pharmacy
+            </div>
+            <div class="col">
+              -39,50 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col"><b>07/05</b></div>
+            <div class="col">Food</div>
+            <div class="col">Card payment</div>
+            <div class="col marker-col">
+              <div class="orange-circle"></div>
+              Food
+            </div>
+            <div class="col">
+              -6,0 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="col"><b>04/05</b></div>
+            <div class="col">Financial</div>
+            <div class="col">Transfer</div>
+            <div class="col marker-col">
+              <div class="blue-circle"></div>
+              Trading
+            </div>
+            <div class="col">
+              +150,00 $ <img src="assets/darr.png" class="darr" alt="darr" />
+            </div>
+          </div>
+
+          <div class="row3">
+            <div class="seemore">
+              See more <img src="assets/bluebox-next.png" alt="more" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

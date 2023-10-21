@@ -1,0 +1,309 @@
+/* variables for colors and dimensions */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.ccard-title-text {
+  color: #2b3eb1;
+  font-style: italic;
+}
+.ccard-title-text-active {
+  color: #fff;
+}
+
+.header {
+  background-color: #2b3eb1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+}
+.header__logo img {
+  width: 75%;
+}
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+.header__nav .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.header__nav .nav__list .db {
+  font-weight: bolder;
+}
+.header__user {
+  display: flex;
+  gap: 40px;
+}
+.header__user .user-links {
+  display: flex;
+  gap: 20px;
+}
+.header .user__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header .user__link img {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.header .user__link .notif {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: 60%;
+  top: 5%;
+}
+
+.main {
+  padding: 40px 60px;
+  background-color: lightgray;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+}
+.row.ccards-row {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.row.ccards-row::-webkit-scrollbar {
+  display: none;
+}
+.row .card {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.row .card--left {
+  background-image: url("/assets/Announcement.png");
+  background-size: cover;
+  width: 40%;
+  gap: 30px;
+}
+.row .card--left .card__cta {
+  background-color: #fff;
+  color: #2b3eb1;
+  padding: 8px 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+}
+.row .card--left .card__text {
+  padding-right: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+.row .card--left a {
+  color: #fc7202;
+  text-decoration: none;
+}
+.row .card--left .dots {
+  display: flex;
+  gap: 15px;
+}
+.row .card--left .dots div {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.9;
+}
+.row .card--left .dots div:nth-child(2) {
+  scale: 1.2;
+  background-color: #fc7202;
+}
+.row .card--right {
+  width: 60%;
+}
+.row .card--right .card__row1,
+.row .card--right .card__row2,
+.row .card--right .card__row3 {
+  display: flex;
+  justify-content: space-between;
+}
+.row .card--right .card__row2 {
+  padding: 20px 0;
+}
+.row .card--right .card__row3--cta {
+  background-color: #2b3eb1;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in;
+}
+.row .card--right .card__row3--cta:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.row .card--right .card__row3--col {
+  display: flex;
+}
+.row .card--right .card__row3--col img {
+  height: 40px;
+}
+.row .card--debit {
+  margin-top: 40px;
+}
+.row .card--debit#active-card {
+  color: #fff;
+  background: linear-gradient(120deg, #2b3eb1 0%, #2b3eb1 54%, darkblue 52%, darkblue 100%);
+}
+.row .card--debit .row1,
+.row .card--debit .row2,
+.row .card--debit .row3 {
+  display: flex;
+  justify-content: space-between;
+}
+.row .card--debit .row2 {
+  padding: 30px 0;
+}
+.row .card--debit .row3 {
+  gap: 30px;
+}
+.row img.darr {
+  height: 8px;
+}
+.row img.bluearr {
+  height: 28px;
+}
+.row .stats {
+  width: 40%;
+}
+.row .stats .row1,
+.row .stats .row4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row .stats .row2,
+.row .stats .row3 {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+}
+.row .stats .row2 {
+  border-bottom: 2px solid lightgray;
+}
+.row .stats .box,
+.row .stats .circle .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.row .stats .hole {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+}
+.row .stats .hole .text {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  translate: -50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row .stats .hole .text p {
+  color: #2b3eb1;
+}
+.row .stats .hole .text h3 {
+  font-size: 30px;
+}
+.row .stats .donut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(#2b3eb1 0deg 216deg, #fc7202 216deg 360deg);
+}
+.row .stats .data1,
+.row .stats .data2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.row .stats .data1 img,
+.row .stats .data2 img {
+  height: 20px;
+}
+.row .stats .data1 {
+  color: #2b3eb1;
+  background-color: lightblue;
+  margin-bottom: 20px;
+}
+.row .stats .data2 {
+  color: #fc7202;
+  background-color: orange;
+}
+.row .table {
+  width: 60%;
+}
+.row .table .marker-col {
+  display: flex;
+  gap: 10px;
+}
+.row .table .orange-circle,
+.row .table .blue-circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.row .table .orange-circle {
+  background-color: #fc7202;
+}
+.row .table .blue-circle {
+  background-color: #2b3eb1;
+}
+.row .table .row1 {
+  display: flex;
+  justify-content: space-between;
+}
+.row .table .row2 {
+  display: flex;
+  gap: 20px;
+}
+.row .table .row2:not(:last-child) {
+  border-bottom: 2px solid lightgray;
+}
+.row .table .row3 {
+  display: flex;
+  justify-content: center;
+}
+.row .table .row3 .seemore {
+  background-color: #2b3eb1;
+  padding: 2px 6px;
+  color: #fff;
+  border-radius: 8px;
+}
+.row .table .row3 .seemore img {
+  height: 20px;
+}/*# sourceMappingURL=styles.css.map */

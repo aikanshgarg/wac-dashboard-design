@@ -1,0 +1,395 @@
+/* variables for colors and dimensions */
+$primary-color: #2b3eb1;
+$primary-color-v2: darkblue;
+$secondary-color: #fc7202;
+$white-color: #fff;
+$text-color-dark: #333;
+$text-color-light: #666;
+$card-bg-image: url("/assets/Announcement.png");
+$grey-underline: 2px solid lightgray;
+
+// universal reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: $text-color-dark;
+}
+
+// TYPOGRAPHY SYSTEM
+.nav-text {
+}
+
+.announcement-text-cta {
+}
+.announcement-text {
+}
+.announcement-text-more {
+}
+
+.small-sub-text {
+}
+.money-cta {
+}
+.savings-text {
+}
+.num-text {
+}
+
+.ccard-title-text {
+  color: $primary-color;
+  font-style: italic;
+
+  &-active {
+    color: $white-color;
+  }
+}
+
+.header {
+  background-color: $primary-color;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+
+  &__logo {
+    img {
+      width: 75%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__nav {
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      .db {
+        font-weight: bolder;
+      }
+    }
+  }
+  &__user {
+    display: flex;
+    gap: 40px;
+
+    .user-links {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .user__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: fit-content;
+    }
+
+    .notif {
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: red;
+      position: absolute;
+      left: 60%;
+      top: 5%;
+    }
+  }
+}
+
+.main {
+  padding: 40px 60px;
+  background-color: lightgray;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+
+  &.ccards-row {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  & .card {
+    background-color: $white-color;
+    padding: 20px 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--left {
+      background-image: $card-bg-image;
+      background-size: cover;
+      width: 40%;
+      gap: 30px;
+
+      .card__cta {
+        background-color: $white-color;
+        color: $primary-color;
+        padding: 8px 8px;
+        width: fit-content;
+        border-radius: 8px;
+      }
+      .card__text {
+        padding-right: 20px;
+        color: $white-color;
+        font-size: 20px;
+      }
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+
+      .dots {
+        display: flex;
+        gap: 15px;
+
+        div {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: $white-color;
+          opacity: 0.9;
+
+          &:nth-child(2) {
+            scale: 1.2;
+            background-color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    &--right {
+      width: 60%;
+
+      .card__row1,
+      .card__row2,
+      .card__row3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .card__row2 {
+        padding: 20px 0;
+      }
+
+      .card__row3--cta {
+        background-color: $primary-color;
+        color: $white-color;
+        cursor: pointer;
+        padding: 12px 18px;
+        border-radius: 8px;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          opacity: 0.9;
+          transform: translateY(-2px);
+        }
+      }
+
+      .card__row3--col {
+        display: flex;
+
+        img {
+          height: 40px;
+        }
+      }
+    }
+
+    &--debit {
+      &#active-card {
+        color: $white-color;
+        background: linear-gradient(
+          120deg,
+          $primary-color 0%,
+          $primary-color 54%,
+          $primary-color-v2 52%,
+          $primary-color-v2 100%
+        );
+      }
+
+      margin-top: 40px;
+
+      .row1,
+      .row2,
+      .row3 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .row2 {
+        padding: 30px 0;
+      }
+      .row3 {
+        gap: 30px;
+      }
+    }
+  }
+
+  img {
+    &.darr {
+      height: 8px;
+    }
+    &.bluearr {
+      height: 28px;
+    }
+  }
+
+  .stats {
+    width: 40%;
+
+    .row1,
+    .row4 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .row2,
+    .row3 {
+      display: flex;
+      justify-content: start;
+      gap: 40px;
+    }
+    .row2 {
+      border-bottom: $grey-underline;
+    }
+    .box,
+    .circle .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hole {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: $white-color;
+      position: relative;
+
+      .text {
+        position: absolute;
+        left: 50%;
+        top: 42%;
+        translate: -50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          color: $primary-color;
+        }
+        h3 {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .donut {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: conic-gradient(
+        $primary-color 0deg 216deg,
+        $secondary-color 216deg 360deg
+      );
+    }
+
+    .data1,
+    .data2 {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 8px;
+      padding: 10px 20px;
+
+      img {
+        height: 20px;
+      }
+    }
+
+    .data1 {
+      color: $primary-color;
+      background-color: lightblue;
+      margin-bottom: 20px;
+    }
+    .data2 {
+      color: $secondary-color;
+      background-color: orange;
+    }
+  }
+
+  .table {
+    width: 60%;
+
+    .marker-col {
+      display: flex;
+      gap: 10px;
+    }
+
+    .orange-circle,
+    .blue-circle {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+    }
+    .orange-circle {
+      background-color: $secondary-color;
+    }
+    .blue-circle {
+      background-color: $primary-color;
+    }
+
+    .row1 {
+      display: flex;
+      justify-content: space-between;
+    }
+    .row2 {
+      display: flex;
+      gap: 20px;
+      &:not(:last-child) {
+        border-bottom: $grey-underline;
+      }
+    }
+    .row3 {
+      display: flex;
+      justify-content: center;
+
+      .seemore {
+        background-color: $primary-color;
+        padding: 2px 6px;
+        color: $white-color;
+        border-radius: 8px;
+
+        img {
+          height: 20px;
+        }
+      }
+    }
+  }
+}
