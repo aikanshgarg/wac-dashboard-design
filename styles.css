@@ -149,7 +149,7 @@ body {
   justify-content: space-between;
 }
 .row .card--left {
-  background-image: url("/assets/Announcement.png");
+  background-image: url("assets/Announcement.png");
   background-size: cover;
   width: 40%;
   gap: 20px;
