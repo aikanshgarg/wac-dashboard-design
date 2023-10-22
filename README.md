@@ -2,5 +2,8 @@
 
 converted a design to code using png image =>
 
-![image](https://github.com/aikanshgarg/wac-dashboard-design/assets/40751974/f37bc808-02e5-4548-b6e8-4972868173a0)
-![image](https://github.com/aikanshgarg/wac-dashboard-design/assets/40751974/1cd339a5-eb35-4212-b3e7-34d7434eafe2)
+#### First Fold
+![image](https://github.com/aikanshgarg/wac-dashboard-design/assets/40751974/c020b144-f2e8-4e31-87ae-4bb846a49211)
+
+#### Stats & Table
+![image](https://github.com/aikanshgarg/wac-dashboard-design/assets/40751974/031dda6d-29b9-48e7-9c97-9b86a502c792)
