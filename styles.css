@@ -20,7 +20,7 @@
 .first-savings {
   font-size: 18px;
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .big-num {
@@ -44,11 +44,14 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: scroll;
   animation: fadeInAnimation ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   background-color: #eeeff3;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes fadeInAnimation {
@@ -107,13 +110,14 @@ body {
   height: fit-content;
 }
 .header .user__link .notif {
-  height: 5px;
-  width: 5px;
+  height: 6px;
+  width: 6px;
+  border: 1px solid #2b3eb1;
   border-radius: 50%;
   background-color: red;
   position: absolute;
   left: 60%;
-  top: 5%;
+  top: 8%;
 }
 
 .main {
@@ -130,12 +134,12 @@ body {
 
 .row {
   display: flex;
-  gap: 30px;
+  gap: 39px;
   justify-content: space-between;
 }
 .row.ccards-row {
   overflow-x: scroll;
-  overflow-y: hidden;
+  gap: 32px;
 }
 .row.ccards-row::-webkit-scrollbar {
   display: none;
@@ -160,12 +164,12 @@ body {
   padding: 10px;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
 }
 .row .card--left .card__text {
-  padding-right: 20px;
+  padding-bottom: 16px;
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
@@ -215,7 +219,7 @@ body {
   cursor: pointer;
   font-size: 12px;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   transition: all 0.2s ease-in;
 }
 .row .card--right .card__row3--cta:hover {
@@ -231,8 +235,9 @@ body {
   margin-right: 12px;
 }
 .row .card--debit {
-  padding: 20px 40px;
-  margin: 30px 0;
+  padding: 30px 32px;
+  width: 25%;
+  margin: 39px 0;
 }
 .row .card--debit h3 {
   color: #2b3eb1;
@@ -391,7 +396,7 @@ body {
 .row .table .row2 {
   display: flex;
   overflow: scroll;
-  gap: 60px;
+  gap: 40px;
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 3px solid #f5f7f9;
@@ -402,6 +407,10 @@ body {
 .row .table .row2 .col {
   font-weight: 400;
   font-size: 14px;
+  min-width: 120px;
+}
+.row .table .row2 .col.dates {
+  min-width: auto;
 }
 .row .table .row3 {
   display: flex;
@@ -415,7 +424,7 @@ body {
   background-color: #2b3eb1;
   padding: 2px 16px;
   color: #ffffff;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .row .table .row3 .seemore img {
   height: 40px;

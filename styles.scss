@@ -33,7 +33,7 @@ $num-font-size: 24px;
 .first-savings {
   font-size: 18px;
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .big-num {
   font-weight: 600;
@@ -57,7 +57,10 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   animation: fadeInAnimation ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -129,13 +132,14 @@ body {
     }
 
     .notif {
-      height: 5px;
-      width: 5px;
+      height: 6px;
+      width: 6px;
+      border: 1px solid $primary-color;
       border-radius: 50%;
       background-color: red;
       position: absolute;
       left: 60%;
-      top: 5%;
+      top: 8%;
     }
   }
 }
@@ -155,13 +159,13 @@ body {
 
 .row {
   display: flex;
-  gap: 30px;
+  gap: 39px;
   justify-content: space-between;
   // flex-wrap: wrap;
 
   &.ccards-row {
     overflow-x: scroll;
-    overflow-y: hidden;
+    gap: 32px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -187,12 +191,12 @@ body {
         color: $primary-color;
         padding: 10px;
         width: fit-content;
-        border-radius: 8px;
+        border-radius: 10px;
         font-size: $link-font-size;
         font-weight: 600;
       }
       .card__text {
-        padding-right: 20px;
+        padding-bottom: 16px;
         color: $white-color;
         font-size: 20px;
         font-weight: 600;
@@ -250,7 +254,7 @@ body {
         cursor: pointer;
         font-size: 12px;
         padding: 12px 20px;
-        border-radius: 8px;
+        border-radius: 15px;
         transition: all 0.2s ease-in;
 
         &:hover {
@@ -271,7 +275,8 @@ body {
     }
 
     &--debit {
-      padding: 20px 40px;
+      padding: 30px 32px;
+      width: 25%;
 
       h3 {
         color: $primary-color;
@@ -292,7 +297,7 @@ body {
         }
       }
 
-      margin: 30px 0;
+      margin: 39px 0;
 
       .row1,
       .row2,
@@ -468,7 +473,7 @@ body {
       &::-webkit-scrollbar {
         display: none;
       }
-      gap: 60px;
+      gap: 40px;
       justify-content: space-between;
       padding: 20px 0;
       border-bottom: $grey-underline;
@@ -476,6 +481,11 @@ body {
       .col {
         font-weight: 400;
         font-size: 14px;
+        min-width: 120px;
+
+        &.dates {
+          min-width: auto;
+        }
       }
     }
     .row3 {
@@ -490,7 +500,7 @@ body {
         background-color: $primary-color;
         padding: 2px 16px;
         color: $white-color;
-        border-radius: 8px;
+        border-radius: 10px;
 
         img {
           height: 40px;
